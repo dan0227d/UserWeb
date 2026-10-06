@@ -4,7 +4,8 @@
 
 專案包含會員註冊、登入驗證、JWT 身分驗證、使用者資料查詢、分頁、個人資料管理、檔案上傳、PDF 報表產生等功能，並使用 Docker 建立 MySQL 與後端執行環境，以及透過 JMeter 進行 API 效能測試。
 
-測試影片連結https://www.youtube.com/watch?v=PxwYS4y01Fg
+🎥 **專案測試影片：**  
+[YouTube - UserWeb 專案測試影片](https://www.youtube.com/watch?v=PxwYS4y01Fg)
 
 ---
 
@@ -45,7 +46,7 @@
 
 ### Security
 
-使用 Spring Security 建立 API 身分驗證機制。
+使用 **Spring Security** 建立 API 身分驗證機制。
 
 主要包含：
 
@@ -135,7 +136,7 @@ Controller
 
 ---
 
-🏗️ 系統架構
+## 🏗️ 系統架構
 
 ```text
 ┌─────────────────┐
@@ -167,16 +168,22 @@ Controller
           │      :3306      │
           └─────────────────┘
 ```
-🔐 JWT 驗證流程
 
-系統採用 Stateless JWT Authentication。
+---
+
+## 🔐 JWT 驗證流程
+
+系統採用 **Stateless JWT Authentication**。
 
 前端登入：
 
+```http
 POST /api/user/login
+```
 
 登入成功後取得：
 
+```json
 {
   "accessToken": "...",
   "refreshToken": "...",
@@ -186,153 +193,104 @@ POST /api/user/login
     "username": "user01"
   }
 }
+```
 
-之後存取需要登入的 API 時：
+之後存取需要登入的 API 時，在 Request Header 加入：
 
+```http
 Authorization: Bearer <accessToken>
+```
 
-後端透過 JwtFilter：
+後端透過 `JwtFilter` 進行驗證：
 
-取得 Authorization Header
+1. 取得 Authorization Header
+2. 解析 Bearer Token
+3. 使用 RSA Public Key 驗證 JWT
+4. 取得 Username 與 Authorities
+5. 建立 Authentication
+6. 寫入 SecurityContext
+7. 通過 Spring Security 驗證後進入 Controller
 
-解析 Bearer Token
+---
 
-使用 RSA Public Key 驗證 JWT
+## 🔑 Access Token / Refresh Token
 
-取得 Username 與 Authorities
+系統將 JWT 分成 Access Token 與 Refresh Token：
 
-建立 Authentication
-
-寫入 SecurityContext
-
-通過 Spring Security 驗證後進入 Controller
-
-🔑 Access Token / Refresh Token
-
-系統將 JWT 分成：
-
+```text
 Access Token
     │
-    ├── 存取一般 API
+    ├── 用於存取一般 API
     │
     └── 有效時間較短
 
 Refresh Token
     │
     └── Access Token 過期時取得新的 Access Token
+```
 
 Access Token 過期時，後端會回傳：
 
+```json
 {
   "message": "JWT_EXPIRED"
 }
+```
 
 前端可依照回傳結果處理登入過期狀態。
 
-📡 API
+---
+
+## 📡 API
 
 主要 API：
 
-Method
+| Method | API | 功能 |
+|---|---|---|
+| POST | `/api/user/login` | 登入 |
+| POST | `/api/user/register` | 註冊 |
+| POST | `/api/user/logout` | 登出 |
+| POST | `/api/user/refresh` | 更新 Access Token |
+| GET | `/api/user/me` | 取得目前登入使用者 |
+| GET | `/api/user` | 取得使用者資料 |
+| GET | `/api/user/search` | 搜尋 / 分頁 |
+| GET | `/api/user/usercontext` | 取得個人資料 |
+| POST | `/api/user/usercontext` | 儲存個人資料 |
+| GET | `/api/user/users` | 產生 PDF 報表 |
 
-API
+---
 
-功能
+## 🔎 搜尋與分頁
 
-POST
+支援 Username 關鍵字搜尋與分頁功能：
 
-/api/user/login
-
-登入
-
-POST
-
-/api/user/register
-
-註冊
-
-POST
-
-/api/user/logout
-
-登出
-
-POST
-
-/api/user/refresh
-
-Refresh Token
-
-GET
-
-/api/user/me
-
-取得目前登入使用者
-
-GET
-
-/api/user
-
-取得使用者資料
-
-GET
-
-/api/user/search
-
-搜尋 / 分頁
-
-GET
-
-/api/user/usercontext
-
-取得個人資料
-
-POST
-
-/api/user/usercontext
-
-儲存個人資料
-
-GET
-
-/api/user/users
-
-產生 PDF 報表
-
-🔎 搜尋與分頁
-
-支援 Username 關鍵字搜尋：
-
+```http
 GET /api/user/search?username=user&page=0&size=10
+```
 
 參數：
 
-Parameter
-
-說明
-
-username
-
-搜尋關鍵字
-
-page
-
-頁碼
-
-size
-
-每頁資料筆數
+| Parameter | 說明 |
+|---|---|
+| `username` | 搜尋關鍵字 |
+| `page` | 頁碼 |
+| `size` | 每頁資料筆數 |
 
 前端依照資料總筆數計算頁數：
 
+```javascript
 Math.ceil(total / size)
+```
 
-📄 JasperReports
+---
 
-使用 JasperReports 產生 PDF 報表。
+## 📄 JasperReports
+
+使用 **JasperReports** 產生 PDF 報表。
 
 流程：
 
+```text
 MySQL
   │
   ▼
@@ -353,13 +311,17 @@ PDF
   ├── Browser Preview
   │
   └── Download
+```
 
-📂 檔案匯入
+---
+
+## 📂 檔案匯入
 
 系統支援文字檔資料匯入。
 
 匯入流程：
 
+```text
 Upload File
      │
      ▼
@@ -373,42 +335,55 @@ Spring Boot
      │
      ▼
 Database
+```
 
-若其中一筆資料發生錯誤，會透過 Transaction Rollback 避免部分資料成功寫入造成資料不一致。
+若其中一筆資料發生錯誤，會透過 **Transaction Rollback** 避免部分資料成功寫入而造成資料不一致。
 
-🐳 Docker
+---
+
+## 🐳 Docker
 
 專案使用 Docker 建立執行環境。
 
 主要 Container：
 
+```text
 userweb-app
-     │
      │
      ▼
 userweb-network
      │
      ▼
 mysql-db
+```
 
 Docker Compose 啟動：
 
+```bash
 docker compose up -d
+```
 
 停止：
 
+```bash
 docker compose down
+```
 
 查看後端 Log：
 
+```bash
 docker compose logs -f userweb
+```
 
-⚡ JMeter Performance Testing
+---
 
-使用 Apache JMeter 對 API 進行效能測試。
+## ⚡ JMeter Performance Testing
+
+使用 **Apache JMeter** 對 API 進行效能測試。
 
 測試流程包含：
 
+```text
 Login
   ↓
 Search
@@ -420,115 +395,112 @@ Report
 File Upload
   ↓
 Logout
+```
 
 測試不同 Concurrent Users：
 
-10 Threads
-20 Threads
-50 Threads
+- 10 Threads
+- 20 Threads
+- 50 Threads
 
-用於觀察：
+主要觀察：
 
-Response Time
+- Response Time
+- Throughput
+- Error Rate
+- HTTP Status
+- JWT Authentication
+- API 在多人同時請求下的行為
 
-Throughput
+---
 
-Error Rate
-
-HTTP Status
-
-JWT Authentication
-
-API 在多人同時請求下的行為
-
-🗄️ Database
+## 🗄️ Database
 
 主要資料表：
 
-user
+### `user`
 
-id
-user
-username
-password
+| Column | 說明 |
+|---|---|
+| `id` | Primary Key |
+| `user` | 使用者姓名 |
+| `username` | 登入帳號，Unique |
+| `password` | 使用者密碼 |
 
-其中：
+其中密碼不直接儲存明文，而是儲存加密後的密碼。
 
-id       → Primary Key
-username → Unique
-password → BCrypt encoded
+### `usercontext`
 
-usercontext
+| Column | 說明 |
+|---|---|
+| `id` | Primary Key |
+| `userid` | 對應使用者 ID |
+| `age` | 年齡 |
+| `email` | Email |
+| `address` | 地址 |
 
-id
-userid
-age
-email
-address
+`userid` 與 `user.id` 建立關聯。
 
-userid 與 user.id 建立關聯。
+---
 
-▶️ 執行專案
+## ▶️ 執行專案
 
-Backend
+### Backend
 
-進入 Spring Boot 專案：
+進入 Spring Boot 專案後執行：
 
+```bash
 mvn spring-boot:run
+```
 
 Backend：
 
+```text
 http://localhost:8080
+```
 
-Frontend
+### Frontend
 
-進入 React 專案：
+進入 React 專案後執行：
 
+```bash
 npm install
 npm run dev
+```
 
 Frontend：
 
+```text
 http://localhost:5173
+```
 
-📚 專案學習重點
+---
+
+## 📚 專案學習重點
 
 透過此專案實作與練習：
 
-RESTful API 設計
+- RESTful API 設計
+- Spring Boot Web Application
+- React 前後端分離
+- Spring Security
+- JWT Authentication
+- RSA Digital Signature
+- Access Token / Refresh Token
+- JPA
+- MyBatis
+- Transaction Management
+- MySQL
+- JasperReports
+- File Upload
+- Docker / Docker Compose
+- JMeter Performance Testing
+- Git Version Control
 
-Spring Boot Web Application
+---
 
-React 前後端分離
+## 👤 Author
 
-Spring Security
-
-JWT Authentication
-
-RSA Digital Signature
-
-Access Token / Refresh Token
-
-JPA
-
-MyBatis
-
-Transaction Management
-
-MySQL
-
-JasperReports
-
-File Upload
-
-Docker / Docker Compose
-
-JMeter Performance Testing
-
-Git Version Control
-
-👤 Author
-
-呂育展
+**呂育展**
 
 Java Backend / Full-Stack Practice Project
