@@ -1,0 +1,270 @@
+.search-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.search-title {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+
+/* =========================
+   搜尋輸入框
+   ========================= */
+
+.search-input {
+    width: 350px;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 14px;
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    outline: none;
+    transition: 0.2s;
+}
+
+.search-input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+
+/* =========================
+   查無資料
+   ========================= */
+
+.search-empty {
+    margin-top: 25px;
+    color: #777;
+}
+
+
+/* =========================
+   錯誤訊息
+   ========================= */
+
+.search-error {
+    margin-top: 20px;
+    color: red;
+}
+
+
+/* =========================
+   分頁整體
+   ========================= */
+
+.pagination {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+/* =========================
+   上一頁 / 頁數 / 下一頁
+   ========================= */
+
+.page-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.page-control span {
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.page-control button {
+    padding: 9px 18px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    background-color: white;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.page-control button:hover:not(:disabled) {
+    background-color: #f0f0f0;
+}
+
+.page-control button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   每頁筆數
+   正常畫面固定右側
+   ========================= */
+
+.size-control {
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.size-control span {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   每頁筆數輸入框
+   ========================= */
+
+.size-input {
+    width: 45px;
+    height: 30px;
+
+    box-sizing: border-box;
+    padding: 0 6px;
+
+    font-size: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    outline: none;
+}
+
+.size-input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 4px rgba(74, 144, 226, 0.3);
+}
+
+
+/* =========================
+   查詢按鈕
+   ========================= */
+
+.size-control button {
+    height: 32px;
+
+    padding: 0 10px;
+    font-size: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    background-color: white;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.size-control button:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* =========================
+   查詢結果表格
+   ========================= */
+
+.search-table {
+    width: 100%;
+    margin-top: 30px;
+
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.search-table th,
+.search-table td {
+    padding: 12px 18px;
+
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.search-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.search-table tbody tr:hover {
+    background-color: #f7f7f7;
+}
+
+
+/* =========================
+   畫面縮小時
+   每頁筆數自動移到下一排
+   ========================= */
+
+@media (max-width: 750px) {
+
+    .pagination {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    /* 上下頁仍然置中 */
+    .page-control {
+        justify-content: center;
+    }
+
+    /* 取消 absolute，移到下一排 */
+    .size-control {
+        position: static;
+
+        justify-content: flex-end;
+
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   更小的手機畫面
+   ========================= */
+
+@media (max-width: 500px) {
+
+    .search-container {
+        width: 95%;
+    }
+
+    .page-control {
+        gap: 10px;
+    }
+
+    .page-control button {
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+
+    .page-control span {
+        font-size: 16px;
+    }
+}

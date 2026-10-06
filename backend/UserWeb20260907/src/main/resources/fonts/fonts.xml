@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fontFamilies>
+
+    <fontFamily name="Noto Sans TC">
+
+        <normal>fonts/NotoSansTC-Bold.ttf</normal>
+		 <!-- <bold>fonts/NotoSansTC-Bold.ttf</bold>-->
+        <pdfEncoding>Identity-H</pdfEncoding>
+
+        <pdfEmbedded>true</pdfEmbedded>
+
+    </fontFamily>
+
+</fontFamilies>

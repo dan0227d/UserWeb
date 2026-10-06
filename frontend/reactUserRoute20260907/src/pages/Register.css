@@ -1,0 +1,96 @@
+.page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #f5f7fb;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 520px;
+  background-color: white;
+  padding: 36px 42px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.loginBox h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #222;
+  font-size: 30px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.inputGroup label {
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #444;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #cfd6df;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.2s;
+}
+
+.inputGroup input:focus {
+  border-color: #3f7cff;
+  box-shadow: 0 0 0 3px rgba(63, 124, 255, 0.12);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.buttonGroup button {
+  flex: 1;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.buttonGroup button:first-child {
+  background-color: #3f7cff;
+  color: white;
+}
+
+.buttonGroup button:first-child:hover {
+  background-color: #2d64d8;
+}
+
+.buttonGroup button:last-child {
+  background-color: #e9edf3;
+  color: #333;
+}
+
+.buttonGroup button:last-child:hover {
+  background-color: #d9dee6;
+}
+
+.message {
+  margin-top: 20px;
+  text-align: center;
+  color: #d33;
+  min-height: 24px;
+}

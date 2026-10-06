@@ -1,0 +1,88 @@
+<!-- Created with Jaspersoft Studio version 7.0.8.final using JasperReports Library version 7.0.8-6f896111  -->
+<jasperReport name="JasperTest" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ef258420-1ccb-4c3c-ab04-fdee184f2805">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="title" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="user" class="java.lang.String"/>
+	<field name="username" class="java.lang.String"/>
+	<background/>
+	<title height="72">
+		<element kind="frame" uuid="75c5f9c2-3f30-414e-a1b0-26de39473f33" x="-20" y="-20" width="595" height="92" backcolor="#006699" mode="Opaque">
+			<element kind="textField" uuid="8818abec-b540-46a3-a369-8a8578fe26a5" x="20" y="20" width="234" height="43" forecolor="#FFFFFF" fontName="Noto Sans TC" fontSize="34.0" bold="true">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<expression><![CDATA[$P{title}]]></expression>
+			</element>
+		</element>
+	</title>
+	<pageHeader height="13"/>
+	<columnHeader height="49">
+		<element kind="line" uuid="66aaa50f-cd94-4ad9-b0ff-3558faedc118" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+		<element kind="staticText" uuid="43e0c938-4b89-45f3-aa93-8e176d852add" x="0" y="21" width="100" height="27" fontName="Noto Sans TC" hTextAlign="Center" vTextAlign="Middle">
+			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+				<pen lineWidth="0.0"/>
+				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+			<text><![CDATA[ID]]></text>
+		</element>
+		<element kind="staticText" uuid="a6887f5b-08a4-4316-b8a0-4be642d858aa" x="227" y="21" width="100" height="27" fontName="Noto Sans TC" hTextAlign="Center" vTextAlign="Middle">
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<box>
+				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+			<text><![CDATA[name]]></text>
+		</element>
+		<element kind="staticText" uuid="319b9dde-8a37-4f94-9875-3eb795e94ebc" x="455" y="21" width="100" height="27" fontName="Noto Sans TC" hTextAlign="Center" vTextAlign="Middle">
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<box>
+				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+			<text><![CDATA[username]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30">
+			<element kind="line" uuid="f2a264fe-5a78-43eb-9339-11e9df0f2833" x="0" y="19" width="555" height="1" positionType="FixRelativeToBottom"/>
+			<element kind="textField" uuid="0766f0f3-85dd-4d10-bdbc-279a010e3935" x="0" y="0" width="100" height="30" fontName="Noto Sans TC" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{id}]]></expression>
+			</element>
+			<element kind="textField" uuid="76abafae-e233-437a-a603-33c7aadfa34f" x="455" y="0" width="100" height="30" fontName="Noto Sans TC" hTextAlign="Center" vTextAlign="Middle">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<expression><![CDATA[$F{username}]]></expression>
+			</element>
+			<element kind="textField" uuid="29590ed0-9931-4c41-a1c4-d52a1fda16ba" x="227" y="0" width="100" height="30" fontName="Noto Sans TC" hTextAlign="Center" vTextAlign="Middle">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<expression><![CDATA[$F{user}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter/>
+	<pageFooter height="17">
+		<element kind="textField" uuid="31e15ee1-096a-4127-9c33-bda26c50e8b7" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" mode="Opaque" fontName="Noto Sans TC" hTextAlign="Right">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" uuid="258302fb-c8fb-4d42-9902-35897e0a3c8b" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" mode="Opaque" fontName="Noto Sans TC" evaluationTime="Report">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="9d0ec395-70c4-4894-9282-054ddf799eb0" x="0" y="4" width="100" height="13" fontName="Noto Sans TC" pattern="EEEEE dd MMMMM yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary/>
+</jasperReport>

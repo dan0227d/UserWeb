@@ -1,0 +1,77 @@
+.userListPage {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.userListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.userListHeader h2 {
+  margin: 0;
+}
+
+.pdfButtonBox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.exportPdfButton {
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #006699;
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+.exportPdfButton:hover {
+  background-color: #00557f;
+}
+
+.exportPdfButton:active {
+  transform: scale(0.98);
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.userTable th,
+.userTable td {
+  padding: 14px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.userTable th {
+  background-color: #f2f2f2;
+}
+
+.userTable tbody tr:hover {
+  background-color: #f8f8f8;
+}
+.backButton {
+  padding: 12px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #407cff;
+  color: white;
+  cursor: pointer;
+}
+.backButtonArea {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}

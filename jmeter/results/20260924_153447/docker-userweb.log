@@ -1,0 +1,1187 @@
+userweb-app  | 
+userweb-app  |   .   ____          _            __ _ _
+userweb-app  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+userweb-app  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+userweb-app  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+userweb-app  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+userweb-app  |  =========|_|==============|___/=/_/_/_/
+userweb-app  | 
+userweb-app  |  :: Spring Boot ::                (v4.1.1)
+userweb-app  | 
+userweb-app  | 2026-09-24T07:34:40.559Z  INFO 1 --- [UserWeb20260907] [           main] c.e.demo.UserWeb20260907Application      : Starting UserWeb20260907Application v0.0.1-SNAPSHOT using Java 21.0.12 with PID 1 (/app/app.jar started by root in /app)
+userweb-app  | 2026-09-24T07:34:40.563Z  INFO 1 --- [UserWeb20260907] [           main] c.e.demo.UserWeb20260907Application      : No active profile set, falling back to 1 default profile: "default"
+userweb-app  | 2026-09-24T07:34:41.586Z  INFO 1 --- [UserWeb20260907] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+userweb-app  | 2026-09-24T07:34:41.633Z  INFO 1 --- [UserWeb20260907] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+userweb-app  | 2026-09-24T07:34:42.250Z  INFO 1 --- [UserWeb20260907] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+userweb-app  | 2026-09-24T07:34:42.275Z  INFO 1 --- [UserWeb20260907] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+userweb-app  | 2026-09-24T07:34:42.275Z  INFO 1 --- [UserWeb20260907] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+userweb-app  | 2026-09-24T07:34:42.306Z  INFO 1 --- [UserWeb20260907] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1681 ms
+userweb-app  | 2026-09-24T07:34:42.620Z  INFO 1 --- [UserWeb20260907] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+userweb-app  | 2026-09-24T07:34:42.681Z  INFO 1 --- [UserWeb20260907] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+userweb-app  | 2026-09-24T07:34:43.253Z  INFO 1 --- [UserWeb20260907] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+userweb-app  | 2026-09-24T07:34:43.281Z  INFO 1 --- [UserWeb20260907] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+userweb-app  | 2026-09-24T07:34:43.592Z  INFO 1 --- [UserWeb20260907] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67396475
+userweb-app  | 2026-09-24T07:34:43.594Z  INFO 1 --- [UserWeb20260907] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+userweb-app  | 2026-09-24T07:34:43.651Z  WARN 1 --- [UserWeb20260907] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+userweb-app  | 2026-09-24T07:34:43.665Z  INFO 1 --- [UserWeb20260907] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+userweb-app  | 	Database JDBC URL [jdbc:mysql://mysql-db:3306/company]
+userweb-app  | 	Database driver: MySQL Connector/J
+userweb-app  | 	Database dialect: MySQLDialect
+userweb-app  | 	Database version: 9.7.2
+userweb-app  | 	Default catalog/schema: company/undefined
+userweb-app  | 	Autocommit mode: undefined/unknown
+userweb-app  | 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+userweb-app  | 	JDBC fetch size: none
+userweb-app  | 	Pool: DataSourceConnectionProvider
+userweb-app  | 	Minimum pool size: undefined/unknown
+userweb-app  | 	Maximum pool size: undefined/unknown
+userweb-app  | 2026-09-24T07:34:44.409Z  INFO 1 --- [UserWeb20260907] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+userweb-app  | 2026-09-24T07:34:44.505Z  WARN 1 --- [UserWeb20260907] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table usercontent drop foreign key FKctv61sdaeqrkd5nuloye8xmjm" via JDBC [Table 'company.usercontent' doesn't exist]
+userweb-app  | 
+userweb-app  | org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table usercontent drop foreign key FKctv61sdaeqrkd5nuloye8xmjm" via JDBC [Table 'company.usercontent' doesn't exist]
+userweb-app  | 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:91) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at java.base/java.util.HashMap.forEach(Unknown Source) ~[na:na]
+userweb-app  | 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:458) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1452) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.9.jar!/:7.0.9]
+userweb-app  | 	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar!/:4.1.1]
+userweb-app  | 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar!/:4.1.1]
+userweb-app  | 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar!/:4.1.1]
+userweb-app  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar!/:4.1.1]
+userweb-app  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar!/:4.1.1]
+userweb-app  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar!/:4.1.1]
+userweb-app  | 	at com.example.demo.UserWeb20260907Application.main(UserWeb20260907Application.java:11) ~[!/:0.0.1-SNAPSHOT]
+userweb-app  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+userweb-app  | 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+userweb-app  | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:106) ~[app.jar:0.0.1-SNAPSHOT]
+userweb-app  | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[app.jar:0.0.1-SNAPSHOT]
+userweb-app  | 	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[app.jar:0.0.1-SNAPSHOT]
+userweb-app  | Caused by: java.sql.SQLSyntaxErrorException: Table 'company.usercontent' doesn't exist
+userweb-app  | 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.7.0.jar!/:9.7.0]
+userweb-app  | 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar!/:9.7.0]
+userweb-app  | 	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:839) ~[mysql-connector-j-9.7.0.jar!/:9.7.0]
+userweb-app  | 	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:687) ~[mysql-connector-j-9.7.0.jar!/:9.7.0]
+userweb-app  | 	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar!/:na]
+userweb-app  | 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar!/:na]
+userweb-app  | 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:86) ~[hibernate-core-7.4.5.Final.jar!/:7.4.5.Final]
+userweb-app  | 	... 45 common frames omitted
+userweb-app  | 
+userweb-app  | 2026-09-24T07:34:44.681Z  INFO 1 --- [UserWeb20260907] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+userweb-app  | 2026-09-24T07:34:44.746Z  INFO 1 --- [UserWeb20260907] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+userweb-app  | 2026-09-24T07:34:45.440Z  INFO 1 --- [UserWeb20260907] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+userweb-app  | 2026-09-24T07:34:45.486Z  WARN 1 --- [UserWeb20260907] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+userweb-app  | 2026-09-24T07:34:45.999Z  INFO 1 --- [UserWeb20260907] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+userweb-app  | 2026-09-24T07:34:46.021Z  INFO 1 --- [UserWeb20260907] [           main] c.e.demo.UserWeb20260907Application      : Started UserWeb20260907Application in 6.124 seconds (process running for 7.145)
+userweb-app  | 2026-09-24T07:34:47.262Z  INFO 1 --- [UserWeb20260907] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+userweb-app  | 2026-09-24T07:34:47.262Z  INFO 1 --- [UserWeb20260907] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+userweb-app  | 2026-09-24T07:34:47.264Z  INFO 1 --- [UserWeb20260907] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+userweb-app  | -----------test2------1234--------
+userweb-app  | -----------test3------1234--------
+userweb-app  | -----------test1------1234--------
+userweb-app  | -----------test4------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-5 | requestUsername=test3
+userweb-app  | ===========getbyname===================
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-3 | requestUsername=test2
+userweb-app  | ===========getbyname===================
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-4 | requestUsername=test1
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6a5df1bc]
+userweb-app  | ----------------Optional[com.example.demo.model.User@7b054380]
+userweb-app  | ----------------Optional[com.example.demo.model.User@74dfa1a5]
+userweb-app  | ----------finish-------------
+userweb-app  | ----------finish-------------
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test1 | dbUsername=test1 | userId=1
+userweb-app  | ### AUTH USER ### requestUsername=test3 | dbUsername=test3 | userId=3
+userweb-app  | ### AUTH USER ### requestUsername=test2 | dbUsername=test2 | userId=2
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-6 | requestUsername=test4
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3df718d9]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test4 | dbUsername=test4 | userId=4
+userweb-app  | -----------test5------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-7 | requestUsername=test5
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@29df9a29]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test5 | dbUsername=test5 | userId=5
+userweb-app  | -----------test6------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-8 | requestUsername=test6
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@615f03cc]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test6 | dbUsername=test6 | userId=6
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6b45c0a9]
+userweb-app  | ----------------Optional[com.example.demo.model.User@45743673]
+userweb-app  | ------------------------------
+userweb-app  | ----------------Optional[com.example.demo.model.User@6625e0e2]
+userweb-app  | ------------------------------
+userweb-app  | ----------------Optional[com.example.demo.model.User@111ab230]
+userweb-app  | ------------------------------
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@17e55afe]
+userweb-app  | ------------------------------
+userweb-app  | -----------test7------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-9 | requestUsername=test7
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@37c72113]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test7 | dbUsername=test7 | userId=7
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@8d00f2c]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@49073774]
+userweb-app  | -----------test8------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-10 | requestUsername=test8
+userweb-app  | ===========getbyname===================
+userweb-app  | ------------------------------
+userweb-app  | ----------------Optional[com.example.demo.model.User@627b8eac]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test8 | dbUsername=test8 | userId=8
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2c9fe391]
+userweb-app  | ------------------------------
+userweb-app  | -----------test9------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-1 | requestUsername=test9
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4434eb87]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test9 | dbUsername=test9 | userId=9
+userweb-app  | -----------test10------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-2 | requestUsername=test10
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@5e0e7e10]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test10 | dbUsername=test10 | userId=10
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2e892903]
+userweb-app  | ------------------------------
+userweb-app  | -----------test11------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-8 | requestUsername=test11
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@b3c795]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test11 | dbUsername=test11 | userId=11
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3b53fe6]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4153229f]
+userweb-app  | ------------------------------
+userweb-app  | -----------test12------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-4 | requestUsername=test12
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@5349803]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test12 | dbUsername=test12 | userId=12
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6a6707c9]
+userweb-app  | ------------------------------
+userweb-app  | -----------test13------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-7 | requestUsername=test13
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3bb14aad]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test13 | dbUsername=test13 | userId=13
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@45cb66e4]
+userweb-app  | ------------------------------
+userweb-app  | -----------test14------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-3 | requestUsername=test14
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2c517d52]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test14 | dbUsername=test14 | userId=14
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@581d6c92]
+userweb-app  | ------------------------------
+userweb-app  | -----------test15------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-5 | requestUsername=test15
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@60c27784]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test15 | dbUsername=test15 | userId=15
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@33076710]
+userweb-app  | ------------------------------
+userweb-app  | -----------test16------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-6 | requestUsername=test16
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@32847e]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test16 | dbUsername=test16 | userId=16
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@69018bce]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1d6e7a6]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3840bc96]
+userweb-app  | ----------------Optional[com.example.demo.model.User@37a98c5c]
+userweb-app  | ----------------Optional[com.example.demo.model.User@aeb599d]
+userweb-app  | ----------------Optional[com.example.demo.model.User@591fe959]
+userweb-app  | ----------------Optional[com.example.demo.model.User@7e6823dd]
+userweb-app  | ----------------Optional[com.example.demo.model.User@57576e7b]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6b7f5a4]
+userweb-app  | ----------------Optional[com.example.demo.model.User@43503078]
+userweb-app  | ----------------Optional[com.example.demo.model.User@d263b89]
+userweb-app  | ----------------Optional[com.example.demo.model.User@114c734f]
+userweb-app  | ----------------Optional[com.example.demo.model.User@3edcb1b8]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@5f8e0e1f]
+userweb-app  | ----------------Optional[com.example.demo.model.User@2a98328e]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3ddfd0de]
+userweb-app  | ------------------------------
+userweb-app  | -----------test17------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-7 | requestUsername=test17
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2db4b23f]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test17 | dbUsername=test17 | userId=17
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@39df742a]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@29852a94]
+userweb-app  | ----------------Optional[com.example.demo.model.User@668a277]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@68fc4950]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2d13ecd4]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@27a500d0]
+userweb-app  | ----------------Optional[com.example.demo.model.User@71078976]
+userweb-app  | ----------------Optional[com.example.demo.model.User@75cf16d3]
+userweb-app  | ----------------Optional[com.example.demo.model.User@620f8fcd]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@5464eba]
+userweb-app  | ----------------Optional[com.example.demo.model.User@749df0cb]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@772a70c5]
+userweb-app  | ----------------Optional[com.example.demo.model.User@68f48554]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6b3dd21]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6ad8f772]
+userweb-app  | ----------------Optional[com.example.demo.model.User@4ccab2d9]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@158fcbc9]
+userweb-app  | ----------------Optional[com.example.demo.model.User@639be790]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2f43b886]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@770605d]
+userweb-app  | ----------------Optional[com.example.demo.model.User@4d977efb]
+userweb-app  | ----------------Optional[com.example.demo.model.User@2b942a69]
+userweb-app  | ----------------Optional[com.example.demo.model.User@58c7a82e]
+userweb-app  | ===========getbyname===================
+userweb-app  | -----------test18------1234--------
+userweb-app  | ----------------Optional[com.example.demo.model.User@4558ecab]
+userweb-app  | ----------------Optional[com.example.demo.model.User@7c66e6ac]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@73be420b]
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-8 | requestUsername=test18
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4be00ba1]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@215ac025]
+userweb-app  | ----------------Optional[com.example.demo.model.User@18bcd111]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@271a5681]
+userweb-app  | ----------------Optional[com.example.demo.model.User@71b99c84]
+userweb-app  | ----------------Optional[com.example.demo.model.User@3d975f2b]
+userweb-app  | ----------finish-------------
+userweb-app  | ------------------------------
+userweb-app  | ### AUTH USER ### requestUsername=test18 | dbUsername=test18 | userId=18
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@fdebe5]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@63a5ac26]
+userweb-app  | ----------------Optional[com.example.demo.model.User@20d6a8e4]
+userweb-app  | ----------------Optional[com.example.demo.model.User@7af1103]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@5d96c757]
+userweb-app  | ----------------Optional[com.example.demo.model.User@304fe0cb]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3391d879]
+userweb-app  | ----------------Optional[com.example.demo.model.User@7faf88b6]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@26055cab]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6f1ce67e]
+userweb-app  | ----------------Optional[com.example.demo.model.User@61429bf9]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7e079ae4]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3ae1ca26]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4ee24544]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@71f6c871]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1c2c2729]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@841ff96]
+userweb-app  | ----------------Optional[com.example.demo.model.User@277a64bf]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6ac3616]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@78b7d2fb]
+userweb-app  | -----------test19------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-16 | requestUsername=test19
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@49fec743]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@965746e]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1dd890c5]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6d62e0]
+userweb-app  | ----------------Optional[com.example.demo.model.User@3e2ac876]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@33873ebc]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@25dc3ae7]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7be6a04e]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3d81c97e]
+userweb-app  | ----------------Optional[com.example.demo.model.User@7ac6a2df]
+userweb-app  | ----------------Optional[com.example.demo.model.User@4fb05815]
+userweb-app  | ----------------Optional[com.example.demo.model.User@3dfd94a1]
+userweb-app  | ----------------Optional[com.example.demo.model.User@66f0851d]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@35c1e4f]
+userweb-app  | ----------------Optional[com.example.demo.model.User@a5a8226]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@48824ec1]
+userweb-app  | ----------------Optional[com.example.demo.model.User@24df8570]
+userweb-app  | ----------------Optional[com.example.demo.model.User@77932ace]
+userweb-app  | ----------------Optional[com.example.demo.model.User@78d9b90e]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6ebce09e]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2317524d]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test19 | dbUsername=test19 | userId=19
+userweb-app  | -----------test20------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-4 | requestUsername=test20
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@38756bd1]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@55f83939]
+userweb-app  | ----------------Optional[com.example.demo.model.User@56e2896a]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1aaf6eda]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@24a68575]
+userweb-app  | ----------------Optional[com.example.demo.model.User@26adbe78]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test20 | dbUsername=test20 | userId=20
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2c826a68]
+userweb-app  | ----------------Optional[com.example.demo.model.User@55264ded]
+userweb-app  | ----------------Optional[com.example.demo.model.User@4c7bd52e]
+userweb-app  | ----------------Optional[com.example.demo.model.User@57b49a58]
+userweb-app  | ----------------Optional[com.example.demo.model.User@afc20cb]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@280a5e6]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@61738fb0]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6168ff1e]
+userweb-app  | ----------------Optional[com.example.demo.model.User@707fbca2]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@216f9811]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3075d599]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@388aad9a]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@ec43627]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7a31acb6]
+userweb-app  | ----------------Optional[com.example.demo.model.User@4fb456f8]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@815f2f3]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@33f3ce75]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@44b884cd]
+userweb-app  | ----------------Optional[com.example.demo.model.User@1b44e558]
+userweb-app  | ----------------Optional[com.example.demo.model.User@74e7576c]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7c7274cc]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@26f48708]
+userweb-app  | ----------------Optional[com.example.demo.model.User@2e71b624]
+userweb-app  | ----------------Optional[com.example.demo.model.User@76129cf4]
+userweb-app  | ----------------Optional[com.example.demo.model.User@57fffea5]
+userweb-app  | ----------------Optional[com.example.demo.model.User@7c329e19]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4c1d4dad]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6145527b]
+userweb-app  | ----------------Optional[com.example.demo.model.User@1b98adb0]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1b03cc40]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@8e3dd0c]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7c927eb9]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@420d8ba3]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@625f612f]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@16469c7b]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6789d9db]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@550657c3]
+userweb-app  | ----------------Optional[com.example.demo.model.User@1484226]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@71a22fc3]
+userweb-app  | ----------------Optional[com.example.demo.model.User@530ac2e]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@28964aab]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@39186522]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@102cf84f]
+userweb-app  | ----------------Optional[com.example.demo.model.User@694690bd]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@49190409]
+userweb-app  | ----------------Optional[com.example.demo.model.User@46f8d54b]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@5135d722]
+userweb-app  | ----------------Optional[com.example.demo.model.User@31608296]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@27e927c8]
+userweb-app  | ----------------Optional[com.example.demo.model.User@5d123489]
+userweb-app  | ----------------Optional[com.example.demo.model.User@3295ee54]
+userweb-app  | ----------------Optional[com.example.demo.model.User@74ffacd9]
+userweb-app  | ----------------Optional[com.example.demo.model.User@3827440f]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1b8c9d9a]
+userweb-app  | ----------------Optional[com.example.demo.model.User@451e81ed]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6d19b23e]
+userweb-app  | ----------------Optional[com.example.demo.model.User@55c4cdc0]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3981daaf]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@715243a3]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1511350d]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6754fe10]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2aa07c6e]
+userweb-app  | ----------------Optional[com.example.demo.model.User@54cbceab]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6ca80c3b]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@29104dd8]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4ebd0883]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@74d710f5]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@112c1cf9]
+userweb-app  | ----------------Optional[com.example.demo.model.User@15ba753d]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@18f09e83]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3accfb12]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1982b9f0]
+userweb-app  | ----------------Optional[com.example.demo.model.User@55e60ac4]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7a243bfd]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@23218de]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3495254c]
+userweb-app  | ----------------Optional[com.example.demo.model.User@2b6eb432]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@302d49f2]
+userweb-app  | ----------------Optional[com.example.demo.model.User@4c971df1]
+userweb-app  | ----------------Optional[com.example.demo.model.User@14b57c4a]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@5c3a7b27]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2c913f53]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@76fa90e9]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3d0b3812]
+userweb-app  | === USERS === http-nio-8080-exec-1 JWT成功 username=test15
+userweb-app  | === USERS AUTH === http-nio-8080-exec-1 username=test15
+userweb-app  | ----------------Optional[com.example.demo.model.User@7fb1283c]
+userweb-app  | ===========getbyname===================
+userweb-app  | === USERS === http-nio-8080-exec-14 JWT成功 username=test1
+userweb-app  | === USERS AUTH === http-nio-8080-exec-14 username=test1
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1322a4f]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6794b48d]
+userweb-app  | === USERS === http-nio-8080-exec-18 JWT成功 username=test4
+userweb-app  | === USERS AUTH === http-nio-8080-exec-18 username=test4
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1d58846a]
+userweb-app  | === USERS === http-nio-8080-exec-4 JWT成功 username=test12
+userweb-app  | === USERS AUTH === http-nio-8080-exec-4 username=test12
+userweb-app  | ----------------Optional[com.example.demo.model.User@512143e7]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7eae8507]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7aa658e0]
+userweb-app  | === USERS === http-nio-8080-exec-17 JWT成功 username=test14
+userweb-app  | === USERS AUTH === http-nio-8080-exec-17 username=test14
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2277d6e3]
+userweb-app  | ===========getbyname===================
+userweb-app  | === USERS === http-nio-8080-exec-15 JWT成功 username=test13
+userweb-app  | === USERS AUTH === http-nio-8080-exec-15 username=test13
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7d4c0b0f]
+userweb-app  | === USERS === http-nio-8080-exec-11 JWT成功 username=test9
+userweb-app  | === USERS AUTH === http-nio-8080-exec-11 username=test9
+userweb-app  | === USERS === http-nio-8080-exec-6 JWT成功 username=test7
+userweb-app  | === USERS AUTH === http-nio-8080-exec-6 username=test7
+userweb-app  | ----------------Optional[com.example.demo.model.User@35b00e1e]
+userweb-app  | ===========getbyname===================
+userweb-app  | === USERS === http-nio-8080-exec-16 JWT成功 username=test2
+userweb-app  | ===========getbyname===================
+userweb-app  | === USERS === http-nio-8080-exec-9 JWT成功 username=test10
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@14ad3dcc]
+userweb-app  | === USERS === http-nio-8080-exec-7 JWT成功 username=test6
+userweb-app  | === USERS AUTH === http-nio-8080-exec-7 username=test6
+userweb-app  | === USERS === http-nio-8080-exec-19 JWT成功 username=test16
+userweb-app  | ===========getbyname===================
+userweb-app  | === USERS AUTH === http-nio-8080-exec-16 username=test2
+userweb-app  | === USERS AUTH === http-nio-8080-exec-9 username=test10
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3667befe]
+userweb-app  | ===========getbyname===================
+userweb-app  | === USERS === http-nio-8080-exec-12 JWT成功 username=test3
+userweb-app  | === USERS AUTH === http-nio-8080-exec-12 username=test3
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1e2b03d4]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@13805b39]
+userweb-app  | ----------------Optional[com.example.demo.model.User@2a02f3ab]
+userweb-app  | ----------------Optional[com.example.demo.model.User@43e3943]
+userweb-app  | === USERS AUTH === http-nio-8080-exec-19 username=test16
+userweb-app  | ----------------Optional[com.example.demo.model.User@3445f0bc]
+userweb-app  | ===========getbyname===================
+userweb-app  | === USERS === http-nio-8080-exec-20 JWT成功 username=test5
+userweb-app  | === USERS AUTH === http-nio-8080-exec-20 username=test5
+userweb-app  | ----------------Optional[com.example.demo.model.User@45a4b356]
+userweb-app  | ----------------Optional[com.example.demo.model.User@472542f3]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@47ca394b]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6ffd87e2]
+userweb-app  | ----------------Optional[com.example.demo.model.User@671bf54e]
+userweb-app  | ----------------Optional[com.example.demo.model.User@3e0a767f]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@abd0333]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4feae076]
+userweb-app  | === USERS === http-nio-8080-exec-10 JWT成功 username=test11
+userweb-app  | === USERS AUTH === http-nio-8080-exec-10 username=test11
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@65867d59]
+userweb-app  | ===========getbyname===================
+userweb-app  | === USERS === http-nio-8080-exec-3 JWT成功 username=test8
+userweb-app  | === USERS AUTH === http-nio-8080-exec-3 username=test8
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4959e388]
+userweb-app  | ----------------Optional[com.example.demo.model.User@41bc09fb]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4d98e1e]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6300f663]
+userweb-app  | ----------------Optional[com.example.demo.model.User@223409e9]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@792d8ff9]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@117c4d7]
+userweb-app  | ----------------Optional[com.example.demo.model.User@5d15e18f]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@49342e7b]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@53264082]
+userweb-app  | ----------------Optional[com.example.demo.model.User@71285aab]
+userweb-app  | ----------------Optional[com.example.demo.model.User@52a25c1]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@94a3473]
+userweb-app  | === USERS === http-nio-8080-exec-2 JWT成功 username=test17
+userweb-app  | === USERS AUTH === http-nio-8080-exec-2 username=test17
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@748b34c2]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6c4478a4]
+userweb-app  | ----------------Optional[com.example.demo.model.User@51f33266]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@52b470c]
+userweb-app  | ----------------Optional[com.example.demo.model.User@3df74185]
+userweb-app  | ----------------Optional[com.example.demo.model.User@5bf15bd0]
+userweb-app  | === USERS === http-nio-8080-exec-8 JWT成功 username=test19
+userweb-app  | === USERS AUTH === http-nio-8080-exec-8 username=test19
+userweb-app  | === USERS === http-nio-8080-exec-5 JWT成功 username=test18
+userweb-app  | === USERS AUTH === http-nio-8080-exec-5 username=test18
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@44a69f92]
+userweb-app  | ----------------Optional[com.example.demo.model.User@13c6a28d]
+userweb-app  | ----------------Optional[com.example.demo.model.User@119a67cf]
+userweb-app  | === USERS === http-nio-8080-exec-13 JWT成功 username=test20
+userweb-app  | === USERS AUTH === http-nio-8080-exec-13 username=test20
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4f3a81c2]
+userweb-app  | User 初始資料建立完成
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@787282ca]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1abb904]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6bb0fe24]
+userweb-app  | ----------------Optional[com.example.demo.model.User@2d99481a]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2a53b239]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@741b1cef]
+userweb-app  | ----------------Optional[com.example.demo.model.User@5b46e149]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@703f14ad]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3d25ed2b]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@23bfd132]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7fc5f905]
+userweb-app  | ----------------Optional[com.example.demo.model.User@420f9069]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3dc1b976]
+userweb-app  | ----------------Optional[com.example.demo.model.User@15ac66ac]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@32950ea7]
+userweb-app  | ----------------Optional[com.example.demo.model.User@bdd199d]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2273ff3b]
+userweb-app  | ----------------Optional[com.example.demo.model.User@4b6c8f09]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@755fc268]
+userweb-app  | ----------------Optional[com.example.demo.model.User@50bfc712]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7b136fd9]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6b27ef91]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@52dd4dcc]
+userweb-app  | ----------------Optional[com.example.demo.model.User@56fa00d0]
+userweb-app  | ----------------Optional[com.example.demo.model.User@10adc3b5]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@70841909]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@5912e052]
+userweb-app  | ----------------Optional[com.example.demo.model.User@195843e0]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@794cb310]
+userweb-app  | ----------------Optional[com.example.demo.model.User@cc5f532]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ---------me 200---------
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@6701b930]
+userweb-app  | ===========getbyname===================
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@112ffcb8]
+userweb-app  | ----------------Optional[com.example.demo.model.User@6d2e69b4]
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@736e0323]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@23709579]
+userweb-app  | ----------------Optional[com.example.demo.model.User@1bfa912c]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@68b3a624]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@2a170d63]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4c0c5da1]
+userweb-app  | ===========getbyname===================
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3ab9e16f]
+userweb-app  | ----------------Optional[com.example.demo.model.User@721c4cf8]
+userweb-app  | ----------------Optional[com.example.demo.model.User@5bffc94d]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@58f28e4]
+userweb-app  | ---------me 200---------
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@19d91b91]
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@45d37a37]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@31197941]
+userweb-app  | ----------------Optional[com.example.demo.model.User@38d2611a]
+userweb-app  | ===========getbyname===================
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@59d2f18e]
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@6bd3085]
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@31ad5abd]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@459b3f17]
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@72fe1885]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@72023f44]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@52c80238]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6467490]
+userweb-app  | ----------------Optional[com.example.demo.model.User@34c77386]
+userweb-app  | ----------------Optional[com.example.demo.model.User@2637042]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7f38e229]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@71cdcabf]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@59111cbf]
+userweb-app  | ===========getbyname===================
+userweb-app  | ---------me 200---------
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7ee92cb7]
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@dc0d271]
+userweb-app  | ---------me 200---------
+userweb-app  | -----------test_1790235294949_15------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-1 | requestUsername=test_1790235294949_15
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@78833607]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@26db085b]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235294949_15 | dbUsername=test_1790235294949_15 | userId=102
+userweb-app  | ---------me 200---------
+userweb-app  | -----------test_1790235294940_7------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-12 | requestUsername=test_1790235294940_7
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@135ef768]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3c1105ac]
+userweb-app  | ---------me 200---------
+userweb-app  | -----------test_1790235294931_18------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-11 | requestUsername=test_1790235294931_18
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@43f7d04]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235294940_7 | dbUsername=test_1790235294940_7 | userId=101
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235294931_18 | dbUsername=test_1790235294931_18 | userId=104
+userweb-app  | -----------test_1790235294926_8------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-18 | requestUsername=test_1790235294926_8
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4119529a]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235294926_8 | dbUsername=test_1790235294926_8 | userId=103
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@59730572]
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@5f6f0135]
+userweb-app  | -----------test_1790235294935_6------1234--------
+userweb-app  | ===========getbyname===================
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-9 | requestUsername=test_1790235294935_6
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4c158b44]
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@177448c8]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7f6b22b0]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235294935_6 | dbUsername=test_1790235294935_6 | userId=105
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@77717f9]
+userweb-app  | ----------------Optional[com.example.demo.model.User@4e148558]
+userweb-app  | ===========getbyname===================
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@46f855a4]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | -----------test_1790235295085_12------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-19 | requestUsername=test_1790235295085_12
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@33d08122]
+userweb-app  | ----------------Optional[com.example.demo.model.User@64fc4b87]
+userweb-app  | -----------test_1790235294976_9------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-10 | requestUsername=test_1790235294976_9
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7bdc3166]
+userweb-app  | ---------me 200---------
+userweb-app  | -----------test_1790235294966_11------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-20 | requestUsername=test_1790235294966_11
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235295085_12 | dbUsername=test_1790235295085_12 | userId=106
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235294976_9 | dbUsername=test_1790235294976_9 | userId=108
+userweb-app  | ----------------Optional[com.example.demo.model.User@24dbad21]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235294966_11 | dbUsername=test_1790235294966_11 | userId=107
+userweb-app  | ----------------Optional[com.example.demo.model.User@6f853960]
+userweb-app  | ---------me 200---------
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@3e5e85fe]
+userweb-app  | ------------------------------
+userweb-app  | -----------test_1790235295172_2------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-13 | requestUsername=test_1790235295172_2
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@16d54cc]
+userweb-app  | -----------test_1790235294960_1------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-8 | requestUsername=test_1790235294960_1
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@553de2a2]
+userweb-app  | ------------------------------
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235295172_2 | dbUsername=test_1790235295172_2 | userId=110
+userweb-app  | -----------test_1790235295039_20------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-17 | requestUsername=test_1790235295039_20
+userweb-app  | ===========getbyname===================
+userweb-app  | -----------test_1790235294944_17------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-14 | requestUsername=test_1790235294944_17
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3d42fa2e]
+userweb-app  | -----------test_1790235294997_16------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-16 | requestUsername=test_1790235294997_16
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@32a3f2c3]
+userweb-app  | ----------------Optional[com.example.demo.model.User@29eb7611]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235295039_20 | dbUsername=test_1790235295039_20 | userId=113
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235294960_1 | dbUsername=test_1790235294960_1 | userId=109
+userweb-app  | ----------------Optional[com.example.demo.model.User@707c7abd]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4e96f53c]
+userweb-app  | ----------------Optional[com.example.demo.model.User@4cfa12ac]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235294997_16 | dbUsername=test_1790235294997_16 | userId=112
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235294944_17 | dbUsername=test_1790235294944_17 | userId=111
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@e590e9]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6bd3d856]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@576fa53c]
+userweb-app  | ===========getbyname===================
+userweb-app  | ------------------------------
+userweb-app  | ----------------Optional[com.example.demo.model.User@afdd4b7]
+userweb-app  | ===========getbyname===================
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@7f8adc4f]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | -----------test_1790235295017_5------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-10 | requestUsername=test_1790235295017_5
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@179529a4]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235295017_5 | dbUsername=test_1790235295017_5 | userId=114
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@383100a7]
+userweb-app  | ----------------Optional[com.example.demo.model.User@33952d51]
+userweb-app  | -----------test_1790235295011_19------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-5 | requestUsername=test_1790235295011_19
+userweb-app  | ===========getbyname===================
+userweb-app  | ---------me 200---------
+userweb-app  | ---------me 200---------
+userweb-app  | ----------------Optional[com.example.demo.model.User@317b8ea3]
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235295011_19 | dbUsername=test_1790235295011_19 | userId=115
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@783c134a]
+userweb-app  | ----------------Optional[com.example.demo.model.User@5fd1e1ae]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@1519d625]
+userweb-app  | ---------me 200---------
+userweb-app  | -----------test_1790235294982_3------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-12 | requestUsername=test_1790235294982_3
+userweb-app  | ===========getbyname===================
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | -----------test_1790235295121_14------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-7 | requestUsername=test_1790235295121_14
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@32f934d1]
+userweb-app  | ===========getbyname===================
+userweb-app  | -----------test_1790235295059_4------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-2 | requestUsername=test_1790235295059_4
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@4c728e36]
+userweb-app  | ----------------Optional[com.example.demo.model.User@5ccb9328]
+userweb-app  | ----------finish-------------
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235294982_3 | dbUsername=test_1790235294982_3 | userId=116
+userweb-app  | ===========getbyname===================
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235295059_4 | dbUsername=test_1790235295059_4 | userId=117
+userweb-app  | ----------------Optional[com.example.demo.model.User@73212ad4]
+userweb-app  | ----------------Optional[com.example.demo.model.User@3185ba3b]
+userweb-app  | -----------test_1790235295175_10------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-6 | requestUsername=test_1790235295175_10
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@171f9d42]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235295175_10 | dbUsername=test_1790235295175_10 | userId=119
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235295121_14 | dbUsername=test_1790235295121_14 | userId=118
+userweb-app  | ----------------Optional[com.example.demo.model.User@71e1e04c]
+userweb-app  | ------------------------------
+userweb-app  | ----------------Optional[com.example.demo.model.User@167623be]
+userweb-app  | ---------me 200---------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@72b4027d]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@321e377d]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@28ce5550]
+userweb-app  | ===========getbyname===================
+userweb-app  | ------------------------------
+userweb-app  | -----------test_1790235295118_13------1234--------
+userweb-app  | ### AUTH ### Thread=http-nio-8080-exec-11 | requestUsername=test_1790235295118_13
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@118e8005]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@321d92b5]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6854c67c]
+userweb-app  | ===========getbyname===================
+userweb-app  | ------------------------------
+userweb-app  | ----------finish-------------
+userweb-app  | ### AUTH USER ### requestUsername=test_1790235295118_13 | dbUsername=test_1790235295118_13 | userId=120
+userweb-app  | ----------------Optional[com.example.demo.model.User@57f0990d]
+userweb-app  | ------------------------------
+userweb-app  | ------------------------------
+userweb-app  | ----------------Optional[com.example.demo.model.User@392bb3b0]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@18a2320f]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3cf37f4e]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@21d7a34b]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@795272f8]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@3ab6be0e]
+userweb-app  | ----------------Optional[com.example.demo.model.User@395cc66f]
+userweb-app  | ----------------Optional[com.example.demo.model.User@503972d9]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@74b98fa9]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7075da00]
+userweb-app  | ------------------------------
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@12fef216]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@6258bc87]
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@53e53670]
+userweb-app  | ----------------Optional[com.example.demo.model.User@67253fce]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@5db18017]
+userweb-app  | ----------------Optional[com.example.demo.model.User@69d26325]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@5e2aab81]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@7a995469]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@24625a23]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@23d41443]
+userweb-app  | ----------------Optional[com.example.demo.model.User@3edb715e]
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@a99dd49]
+userweb-app  | ------------------------------
+userweb-app  | ===========getbyname===================
+userweb-app  | ----------------Optional[com.example.demo.model.User@73612ae9]

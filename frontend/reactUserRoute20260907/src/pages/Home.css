@@ -1,0 +1,42 @@
+.homePage {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fb;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.homeBox {
+  width: 100%;
+  max-width: 650px;
+  background-color: white;
+  padding: 60px 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.homeBox h1 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #222;
+}
+
+.homeBox button {
+  padding: 12px 34px;
+  border: none;
+  border-radius: 9px;
+  background-color: #3f7cff;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.homeBox button:hover {
+  background-color: #2d64d8;
+  transform: translateY(-1px);
+}

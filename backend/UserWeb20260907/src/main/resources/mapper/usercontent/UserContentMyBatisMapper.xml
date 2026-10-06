@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserContentMyBatisMapper">
+
+	<resultMap id="userContentResultMap"
+           type="com.example.demo.model.UserContent">
+
+    <id property="id" column="id"/>
+
+    <result property="age" column="age"/>
+    <result property="email" column="email"/>
+    <result property="address" column="address"/>
+    
+    <association property="user"
+                 javaType="com.example.demo.model.User">
+        <id property="id" column="userid"/>
+    </association>
+
+</resultMap>
+    
+    <select id="findByUserId" resultMap="userContentResultMap">
+    SELECT *
+    FROM usercontent
+    WHERE userid = #{id}
+	</select>
+	
+	<delete id="deleteByUserId">
+		delete from usercontent where userid = #{id}
+	</delete>
+	
+	<insert id="save"
+	        parameterType="UserContent"
+	        useGeneratedKeys="true"
+	        keyProperty="id">
+	    INSERT INTO usercontent (userid, age, email, address)
+	    VALUES (#{user.id}, #{age}, #{email}, #{address})
+	</insert>
+	
+	<update id="update" parameterType="UserContent">
+	    UPDATE usercontent
+	    SET age = #{age},
+	        email = #{email},
+	        address = #{address}
+	    WHERE userid = #{user.id}
+	</update>
+</mapper>

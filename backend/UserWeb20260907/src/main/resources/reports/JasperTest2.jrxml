@@ -1,0 +1,290 @@
+<!-- Created with Jaspersoft Studio version 7.0.8.final using JasperReports Library version 7.0.8-6f896111 -->
+
+<jasperReport name="JasperTest2"
+	language="java"
+	pageWidth="595"
+	pageHeight="842"
+	columnWidth="535"
+	leftMargin="20"
+	rightMargin="20"
+	topMargin="20"
+	bottomMargin="20"
+	uuid="ef258420-1ccb-4c3c-ab04-fdee184f2805">
+
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+
+	<parameter name="title" class="java.lang.String"/>
+
+	<query language="sql"><![CDATA[]]></query>
+
+	<field name="id" class="java.lang.Integer"/>
+	<field name="user" class="java.lang.String"/>
+	<field name="username" class="java.lang.String"/>
+
+	<background/>
+
+	<!-- ==================== 標題 ==================== -->
+	<title height="68">
+
+		<element kind="frame"
+			uuid="75c5f9c2-3f30-414e-a1b0-26de39473f33"
+			x="-20"
+			y="-20"
+			width="595"
+			height="88"
+			backcolor="#0B6F9C"
+			mode="Opaque">
+
+			<element kind="textField"
+				uuid="8818abec-b540-46a3-a369-8a8578fe26a5"
+				x="22"
+				y="20"
+				width="350"
+				height="45"
+				forecolor="#FFFFFF"
+				fontName="Noto Sans TC"
+				fontSize="28.0"
+				bold="true"
+				vTextAlign="Middle">
+
+				<expression><![CDATA[$P{title}]]></expression>
+
+			</element>
+
+		</element>
+
+	</title>
+
+
+	<pageHeader height="16"/>
+
+
+	<!-- ==================== 表頭 ==================== -->
+	<columnHeader height="42">
+
+		<element kind="staticText"
+			uuid="43e0c938-4b89-45f3-aa93-8e176d852add"
+			x="0"
+			y="4"
+			width="110"
+			height="34"
+			backcolor="#E7F1F5"
+			forecolor="#355463"
+			mode="Opaque"
+			fontName="Noto Sans TC"
+			fontSize="11"
+			bold="true"
+			hTextAlign="Center"
+			vTextAlign="Middle">
+
+			<box>
+				<bottomPen lineWidth="0.5"
+					lineStyle="Solid"
+					lineColor="#B9CBD3"/>
+			</box>
+
+			<text><![CDATA[ID]]></text>
+
+		</element>
+
+
+		<element kind="staticText"
+			uuid="a6887f5b-08a4-4316-b8a0-4be642d858aa"
+			x="110"
+			y="4"
+			width="220"
+			height="34"
+			backcolor="#E7F1F5"
+			forecolor="#355463"
+			mode="Opaque"
+			fontName="Noto Sans TC"
+			fontSize="11"
+			bold="true"
+			hTextAlign="Center"
+			vTextAlign="Middle">
+
+			<box>
+				<bottomPen lineWidth="0.5"
+					lineStyle="Solid"
+					lineColor="#B9CBD3"/>
+			</box>
+
+			<text><![CDATA[name]]></text>
+
+		</element>
+
+
+		<element kind="staticText"
+			uuid="319b9dde-8a37-4f94-9875-3eb795e94ebc"
+			x="330"
+			y="4"
+			width="225"
+			height="34"
+			backcolor="#E7F1F5"
+			forecolor="#355463"
+			mode="Opaque"
+			fontName="Noto Sans TC"
+			fontSize="11"
+			bold="true"
+			hTextAlign="Center"
+			vTextAlign="Middle">
+
+			<box>
+				<bottomPen lineWidth="0.5"
+					lineStyle="Solid"
+					lineColor="#B9CBD3"/>
+			</box>
+
+			<text><![CDATA[username]]></text>
+
+		</element>
+
+	</columnHeader>
+
+
+	<!-- ==================== 資料 ==================== -->
+	<detail>
+
+		<band height="36">
+
+			<element kind="textField"
+				uuid="0766f0f3-85dd-4d10-bdbc-279a010e3935"
+				x="0"
+				y="0"
+				width="110"
+				height="35"
+				forecolor="#444444"
+				fontName="Noto Sans TC"
+				fontSize="10"
+				hTextAlign="Center"
+				vTextAlign="Middle">
+
+				<box>
+					<bottomPen lineWidth="0.4"
+						lineStyle="Solid"
+						lineColor="#D8E0E4"/>
+				</box>
+
+				<expression><![CDATA[$F{id}]]></expression>
+
+			</element>
+
+
+			<element kind="textField"
+				uuid="29590ed0-9931-4c41-a1c4-d52a1fda16ba"
+				x="110"
+				y="0"
+				width="220"
+				height="35"
+				forecolor="#444444"
+				fontName="Noto Sans TC"
+				fontSize="10"
+				hTextAlign="Center"
+				vTextAlign="Middle">
+
+				<box>
+					<bottomPen lineWidth="0.4"
+						lineStyle="Solid"
+						lineColor="#D8E0E4"/>
+				</box>
+
+				<expression><![CDATA[$F{user}]]></expression>
+
+			</element>
+
+
+			<element kind="textField"
+				uuid="76abafae-e233-437a-a603-33c7aadfa34f"
+				x="330"
+				y="0"
+				width="225"
+				height="35"
+				forecolor="#444444"
+				fontName="Noto Sans TC"
+				fontSize="10"
+				hTextAlign="Center"
+				vTextAlign="Middle">
+
+				<box>
+					<bottomPen lineWidth="0.4"
+						lineStyle="Solid"
+						lineColor="#D8E0E4"/>
+				</box>
+
+				<expression><![CDATA[$F{username}]]></expression>
+
+			</element>
+
+		</band>
+
+	</detail>
+
+
+	<columnFooter/>
+
+
+	<!-- ==================== Footer ==================== -->
+	<pageFooter height="25">
+
+		<element kind="line"
+			uuid="31c4de31-91d8-497c-bd91-989628461345"
+			x="0"
+			y="2"
+			width="555"
+			height="1"
+			forecolor="#D0D9DD"/>
+
+
+		<element kind="textField"
+			uuid="9d0ec395-70c4-4894-9282-054ddf799eb0"
+			x="0"
+			y="7"
+			width="150"
+			height="15"
+			forecolor="#888888"
+			fontName="Noto Sans TC"
+			fontSize="8"
+			pattern="yyyy/MM/dd">
+
+			<expression><![CDATA[new java.util.Date()]]></expression>
+
+		</element>
+
+
+		<element kind="textField"
+			uuid="31e15ee1-096a-4127-9c33-bda26c50e8b7"
+			x="385"
+			y="7"
+			width="130"
+			height="15"
+			forecolor="#888888"
+			fontName="Noto Sans TC"
+			fontSize="8"
+			hTextAlign="Right">
+
+			<expression><![CDATA["Page " + $V{PAGE_NUMBER} + " of"]]></expression>
+
+		</element>
+
+
+		<element kind="textField"
+			uuid="258302fb-c8fb-4d42-9902-35897e0a3c8b"
+			x="515"
+			y="7"
+			width="40"
+			height="15"
+			forecolor="#888888"
+			fontName="Noto Sans TC"
+			fontSize="8"
+			evaluationTime="Report">
+
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+
+		</element>
+
+	</pageFooter>
+
+
+	<summary/>
+
+</jasperReport>

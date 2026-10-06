@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMyBatisMapper">
+    
+    <!-- 定義 SQL 查詢結果集與 Java 之間複雜的對應規則 Ex: 關聯物件或集合 -->
+    <resultMap id="userResultMap" type="com.example.demo.model.User">
+    <id property="id" column="id"/>
+    <result property="user" column="user"/>
+    <result property="username" column="username"/>
+    <result property="password" column="password"/>
+</resultMap>
+
+    <select id="findAll" resultMap="userResultMap">
+        select * from user
+    </select>
+    
+    <select id="findByUsername" resultMap="userResultMap">
+        select * from user where user.username = #{username}
+    </select>
+    
+    <delete id="delete" >
+    		delete from user where user.username = #{username} 
+    </delete>
+    
+    <select id="findById" resultMap="userResultMap">
+        select * from user where user.id = #{id}
+    </select>
+    
+    <select id="existsByUsername" resultType="boolean">
+    SELECT EXISTS(
+        SELECT 1
+        FROM user
+        WHERE user.username = #{username}
+    )
+	</select>
+	
+	<select id="searchByUsername" resultMap="userResultMap">
+        select * from user where user.username LIKE CONCAT('%', #{username}, '%')
+        ORDER BY id ASC
+        LIMIT #{size} OFFSET #{page}
+    </select>
+    
+    <select id="countByUsername" resultType="long">
+	    SELECT COUNT(*)
+	    FROM user
+	    WHERE user.username LIKE CONCAT('%', #{username}, '%')
+	</select>
+	
+	<insert id="save"
+        parameterType="User"
+        useGeneratedKeys="true"
+        keyProperty="id">
+    INSERT INTO user (user.user, user.username, user.password)
+    VALUES (#{user}, #{username}, #{password})
+	</insert>
+    
+</mapper>

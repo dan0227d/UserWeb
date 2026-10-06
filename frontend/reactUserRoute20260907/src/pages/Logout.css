@@ -1,0 +1,63 @@
+.logoutPage {
+  min-height: calc(100vh - 70px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background-color: #f5f7fb;
+}
+
+.logoutBox {
+  width: 100%;
+  max-width: 460px;
+
+  background-color: white;
+
+  padding: 45px 40px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
+}
+
+.logoutBox h1 {
+  margin-top: 0;
+  margin-bottom: 25px;
+
+  font-size: 30px;
+  color: #222;
+}
+
+.logoutMessage {
+  margin-bottom: 30px;
+
+  font-size: 18px;
+  color: #444;
+}
+
+.logoutButton {
+  padding: 11px 30px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #3f7cff;
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.logoutButton:hover {
+  background-color: #2d64d8;
+  transform: translateY(-1px);
+}

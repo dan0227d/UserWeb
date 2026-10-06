@@ -1,0 +1,52 @@
+.reportPage {
+  width: 90%;
+  margin: 30px auto;
+}
+
+/* 標題 + 按鈕同一排 */
+.reportHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.reportTitle {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* PDF 下載按鈕 */
+.exportPdfButton {
+  padding: 10px 22px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #006699;
+  color: white;
+
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.exportPdfButton:hover {
+  background-color: #00557f;
+}
+
+/* PDF 顯示區 */
+.reportFrame {
+  display: block;
+
+  width: 100%;
+  height: 75vh;
+
+  border: 1px solid #aaa;
+  border-radius: 6px;
+
+  box-sizing: border-box;
+}

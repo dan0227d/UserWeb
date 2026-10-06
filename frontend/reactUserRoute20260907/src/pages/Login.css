@@ -1,0 +1,172 @@
+.page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  background-color: #f5f7fb;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 460px;
+  background-color: white;
+  padding: 36px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* 標題 */
+.loginBox h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #222;
+}
+
+/* 登入成功 */
+.loginBox h2 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   輸入框
+   ========================= */
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.inputGroup label {
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #444;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 11px 12px;
+  font-size: 16px;
+  border: 1px solid #cfd6df;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.2s;
+}
+
+.inputGroup input:focus {
+  border-color: #3f7cff;
+  box-shadow: 0 0 0 3px rgba(63, 124, 255, 0.12);
+}
+
+/* =========================
+   所有 Login 頁面的按鈕基本樣式
+   ========================= */
+
+.loginBox button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* =========================
+   登入 / 註冊按鈕
+   ========================= */
+
+.loginBox .loginButtonGroup {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.loginBox .loginButtonGroup button {
+  flex: 1;
+  background-color: #3f7cff;
+}
+
+.loginBox .loginButtonGroup button:hover {
+  background-color: #2d64d8;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   訊息
+   ========================= */
+
+.message {
+  margin-top: 20px;
+  text-align: center;
+  color: #d33;
+  min-height: 24px;
+}
+
+/* 帳號：test1 */
+.loginBox > p {
+  margin-top: 18px;
+  text-align: center;
+}
+
+/* =========================
+   登出 / 刪除帳號按鈕區
+   ========================= */
+
+.loginBox .logoutButtonGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 25px;
+}
+
+/* 登出、刪除帳號共同設定 */
+.loginBox .logoutButtonGroup .logoutButton,
+.loginBox .logoutButtonGroup .deleteButton {
+  flex: 0 0 auto;
+  width: auto;
+  padding: 10px 22px;
+}
+
+/* 登出 */
+.loginBox .logoutButtonGroup .logoutButton {
+  background-color: #3f7cff;
+  color: white;
+}
+
+.loginBox .logoutButtonGroup .logoutButton:hover {
+  background-color: #2d64d8;
+  transform: translateY(-1px);
+}
+
+/* 刪除帳號 */
+.loginBox .logoutButtonGroup .deleteButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+.loginBox .logoutButtonGroup .deleteButton:hover {
+  background-color: #bb2d3b;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   小螢幕
+   ========================= */
+
+@media (max-width: 480px) {
+  .loginBox {
+    padding: 30px 20px;
+  }
+}

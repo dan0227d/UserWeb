@@ -1,0 +1,78 @@
+.notFoundPage {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7f9;
+}
+
+.notFoundBox {
+  width: 450px;
+  padding: 50px 40px;
+  text-align: center;
+
+  background-color: white;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notFoundCode {
+  margin: 0;
+  font-size: 90px;
+  color: #006699;
+}
+
+.notFoundBox h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.notFoundTent {
+  margin-bottom: 30px;
+  color: #777;
+}
+
+.notFoundButtons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* 回首頁 */
+.homeButton {
+  padding: 10px 20px;
+
+  background-color: #006699;
+  color: white;
+
+  text-decoration: none;
+  border-radius: 6px;
+
+  transition: 0.2s;
+}
+
+.homeButton:hover {
+  background-color: #004f77;
+}
+
+/* 回上一頁 */
+.backButton {
+  padding: 10px 20px;
+
+  background-color: white;
+  color: #006699;
+
+  border: 1px solid #006699;
+  border-radius: 6px;
+
+  cursor: pointer;
+  font-size: 16px;
+
+  transition: 0.2s;
+}
+
+.backButton:hover {
+  background-color: #eaf5fa;
+}
