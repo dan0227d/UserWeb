@@ -2,10 +2,49 @@
 
 一個以前後端分離架構開發的使用者管理系統，使用 **Spring Boot + React + MySQL** 建置。
 
-專案包含會員註冊、登入驗證、JWT 身分驗證、使用者資料查詢、分頁、個人資料管理、檔案上傳、PDF 報表產生等功能，並使用 Docker 建立 MySQL 與後端執行環境，以及透過 JMeter 進行 API 效能測試。
+專案包含會員註冊、登入驗證、JWT 身分驗證、使用者資料查詢、
+分頁、個人資料管理、檔案上傳、PDF 報表產生等功能，
+並使用 Docker 建立 MySQL 與後端執行環境，
+以及透過 JMeter 進行 API 效能測試。
 
 🎥 **專案測試影片：**  
 [YouTube - UserWeb 專案測試影片](https://www.youtube.com/watch?v=PxwYS4y01Fg)
+
+---
+
+## 🖥️ 專案畫面
+
+### 🔐 使用者登入
+
+使用者可透過帳號與密碼登入系統，登入成功後取得 JWT Access Token 與 Refresh Token，後續 API Request 會透過 Token 進行身分驗證。
+
+![使用者登入](docs/images/login.png)
+
+---
+
+### 🔎 使用者查詢與分頁
+
+支援 Username 關鍵字查詢與分頁功能，可切換上一頁、下一頁，並自行設定每頁顯示的資料筆數。
+
+![使用者查詢](docs/images/search.png)
+
+---
+
+### 📄 PDF 使用者報表
+
+透過 JasperReports 將資料庫中的使用者資料產生 PDF 報表，可直接於瀏覽器預覽或下載 PDF。
+
+![PDF 使用者報表](docs/images/report.png)
+
+---
+
+### 📂 文字檔批次匯入
+
+支援上傳 `.txt` 文字檔批次新增使用者資料。
+
+匯入過程使用 Transaction 控制，若其中一筆資料發生錯誤，整批資料會進行 Rollback，避免部分資料寫入造成資料不一致。
+
+![文字檔批次匯入](docs/images/upload.png)
 
 ---
 
