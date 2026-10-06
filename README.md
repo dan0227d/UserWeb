@@ -132,9 +132,12 @@ Controller
 - Docker Compose
 - Git
 - Sourcetree
-  
+
+---
+
 🏗️ 系統架構
 
+```text
 ┌─────────────────┐
 │      React      │
 │   localhost     │
@@ -163,7 +166,7 @@ Controller
           │      MySQL      │
           │      :3306      │
           └─────────────────┘
-
+```
 🔐 JWT 驗證流程
 
 系統採用 Stateless JWT Authentication。
