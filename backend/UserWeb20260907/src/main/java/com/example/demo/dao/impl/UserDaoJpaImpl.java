@@ -14,7 +14,7 @@ import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
 
 @Repository("UserDaoJpa")
-public class UsreDaoJpaImpl implements UserDao{
+public class UserDaoJpaImpl implements UserDao{
 
 	@Autowired
 	private UserRepository userRepository;
